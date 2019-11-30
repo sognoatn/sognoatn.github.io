@@ -9,12 +9,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MFR3PHN');</script>
 <!-- End Google Tag Manager -->
 <script>
+const params = new URLSearchParams(window.location.search);
 var result = {};
-window.location.search
-	.replace(/[?&amp;]+([^=&amp;]+)=([^&amp;]*)/gi, function(str, key, value) {
-		result[key] = value;
-	}
-);
+for(var value of params.keys()) {
+	result[value] = params.get(value);
+};
 if(result) {
 	window.dataLayer = window.dataLayer || [];
 	window.dataLayer.push(result);
