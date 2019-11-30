@@ -9,7 +9,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MFR3PHN');</script>
 <!-- End Google Tag Manager -->
 <script>
-const params = new URLSearchParams(window.location.search);
+var params = new URLSearchParams(window.location.search);
 var result = {};
 for(var value of params.keys()) {
 	result[value] = params.get(value);
@@ -29,7 +29,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>I'm hosted with GitHub Pages. Still working on the rest of the site...</p>
 <script>
 function apiCall() {
-	var params = dataLayer;
+	var params = dataLayer[1];
 	var queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&');
 	var Http = new XMLHttpRequest();
 	var url='http://httpbin.org/get?' + querystring;

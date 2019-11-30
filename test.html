@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var dataLayer = {};
+var params = new URLSearchParams(window.location.search);
+var result = {};
+for(var value of params.keys()) {
+	result[value] = params.get(value);
+};
+if(result) {
+	dataLayer = [{
+		'appQueryString': result}];
+}
+</script>
+</head>
+<body>
+<h1>Welcome to my page</h1>
+<p>I'm hosted with GitHub Pages. Still working on the rest of the site...</p>
+<script>
+function apiCall() {
+	var dlKey = {};
+	var params = dataLayer[0];
+	var queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&');
+	var Http = new XMLHttpRequest();
+	var url='http://httpbin.org/get?' + querystring;
+	Http.open("GET", url);
+	Http.send();
+
+	Http.onreadystatechange = (e) => {
+	  console.log(Http.responseText)
+	}
+}
+</script>
+<form>
+	<button onclick="apiCall()">API Implementation</button>
+</form>
+</body>
+</html>
