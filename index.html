@@ -32,7 +32,8 @@ function apiCall() {
 	var params = dataLayer[1];
 	var queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&');
 	var Http = new XMLHttpRequest();
-	var url = "http://httpbin.org/get?".concat(querystring);
+	var url = "http://httpbin.org/get?";
+	url = url.concat(queryString);
 	Http.open("GET", url);
 	Http.send();
 
