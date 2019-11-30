@@ -28,6 +28,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <h1>Welcome to my page</h1>
 <p>I'm hosted with GitHub Pages. Still working on the rest of the site...</p>
+<script>
+function apiCall() {
+	var params = dataLayer;
+	var queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&');
+	var Http = new XMLHttpRequest();
+	var url='http://httpbin.org/get?' + querystring;
+	Http.open("GET", url);
+	Http.send();
 
+	Http.onreadystatechange = (e) => {
+	  console.log(Http.responseText)
+	}
+}
+</script>
+<form>
+	<button onclick="apiCall()">API Implementation</button>
+</form>
 </body>
 </html>
