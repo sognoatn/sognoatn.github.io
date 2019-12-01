@@ -8,7 +8,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MFR3PHN');</script>
 <!-- End Google Tag Manager -->
-<script>
+<!--<script>
 var params = new URLSearchParams(window.location.search);
 var result = {};
 for(var value of params.keys()) {
@@ -18,16 +18,18 @@ if(result) {
 	window.dataLayer = window.dataLayer || [];
 	window.dataLayer.push(result);
 }
-</script>
+</script>-->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFR3PHN"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<iframe src="mockAd.html" style="height:1000px;width:260px;border:none;overflow:hidden;">
+</iframe>
 <h1>Welcome to my page</h1>
 <p>I'm hosted with GitHub Pages. Still working on the rest of the site...</p>
-<script>
+<!--<script>
 function apiCall() {
 	var params = dataLayer[1];
 	var queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&');
@@ -41,7 +43,7 @@ function apiCall() {
 	  console.log(Http.responseText)
 	}
 }
-</script>
+</script>-->
 <form>
 	<button onclick="apiCall()">API Implementation</button>
 </form>
