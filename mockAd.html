@@ -1,18 +1,44 @@
 <html>
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MFR3PHN');</script>
-<!-- End Google Tag Manager -->
+<script async="async" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js">
+</script>
+<script>
+window.googletag = window.googletag || {cmd: []};
+</script>
+<script>
+googletag.cmd.push(function() {
+	googletag.pubads().set("adsense_background_color", "FFFFFF");
+});
+</script>
+<script>
+googletag.cmd.push(function() {
+	googletag.defineSlot("/1234/travel/asia", [728, 90], "div-gpt-ad-123456789-0")
+		.addService(googletag.pubads())
+		.setTargeting("interests", ["sports", "music", "movies"]);
+	googletag.defineSlot("/1234/travel/asia", [[468, 60], [728, 90], [300, 250]], "div-gpt-ad-123456789-1")
+		.addService(googletag.pubads())
+		.setTargeting("gender", "male")
+		.setTargeting("age", "20-30");
+	googletag.pubads().setTargeting("topic","basketball");
+	googletag.pubads().enableSingleRequest();
+	googletag.enableServices();
+});
+</script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFR3PHN"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<img src="images/tpgAd.jpg" style="border:none;">
+<div id="div-gpt-ad-123456789-0" style="width: 728px; height: 90px">
+<script>
+googletag.cmd.push(function() {
+	googletag.display("div-gpt-ad-123456789-0");
+});
+</script>
+</div>
+<div id="div-gpt-ad-123456789-1">
+<script>
+googletag.cmd.push(function() {
+	googletag.display("div-gpt-ad-123456789-1");
+});
+</script>
+</div>
 </body>
 </html>
